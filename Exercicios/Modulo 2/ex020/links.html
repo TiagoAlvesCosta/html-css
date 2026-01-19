@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* SELETORES PERSONALIZADOS 
+            # = id
+            . = class
+            : = pseudo-class
+            :: = pseudo-element
+            > = children
+        */    
+
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        a { 
+            color: green;
+            text-decoration: none; /* remoçao da linha do link */
+            font-weight: bold; /* peso da fonte */
+        }
+
+        a:visited { /* pseudoclasse referente a link ja acessado */
+            color: darkgreen
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline; /* ao passar o mouse coloca uma linha no link */
+        }
+
+        a:active { /* quando clicado alterna para cor selecionada */
+            color: red;
+        }
+
+        .especial { /* podendo dar mais foco em um link que possa estar em destaque */
+            background-color: lightgreen;
+        }
+
+        .especial::before { /* vira antes do conteudo */
+            content: '⇒';
+            font-weight: normal;
+            color: gray;
+        }
+
+        .especial::after {  /* adiciona uma referncia no fim */
+            content: ' ⇐ '; /* conteudo que vai ser mostrado */
+            font-weight: normal;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io">Repositorio GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" class="especial">Canal do Youtube</a></li>
+        <li><a href="https://cursoemvideo.com">Site do CursoemVideo</a></li>
+    </ul>
+</body>
+</html>

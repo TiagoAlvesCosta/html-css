@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <p>Este video esta hospedado no meu proprio servidor</p>
+
+    <video width="500" poster="imagens/cavalo.jpeg" controls>
+        <source src="midia/cavalo-mp4.mp4" type="video/mp4"> <!-- FORMAS DE ARQUIVO QUE PODEM RODAR -->
+        <source src="midia/Cavalo.webm.webm" type="video/webm">
+        <p>Seu navegador nao tem compatibilidade com reproduçao de videos.</p> <!-- CASO NENHUM ACIMA SEJA COMPATIVEL, VAI APARECER ESSE TEXTO -->
+    </video>
+
+    <h1>Inserindo video do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jszz7M676y8?si=hoHneI3YRbUoyiqB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>Inserindo videos do Vimeo</h1>
+    <div><iframe src="https://player.vimeo.com/video/1091012065?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="530" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"title="TALKING HEADS PSYCHO KILLER"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+    <iframe src="https://player.vimeo.com/video/1146938977?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="530" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Joji - Past Won&#039;t Leave My Bed"></iframe>
+</body>
+</html>

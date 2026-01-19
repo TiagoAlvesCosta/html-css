@@ -1,0 +1,28 @@
+body {
+    background-color: rgba(128, 128, 128, 0.623);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: gray;
+    text-align: center;
+}
+
+h2 {
+    background-color: rgba(128, 128, 128, 0.658);
+    text-align: center;
+}
+
+h3 {
+    background-color: rgba(128, 128, 128, 0.301);
+    text-align: center;
+}
+
+h4 {
+    background-color: rgba(128, 128, 128, 0.219);
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}

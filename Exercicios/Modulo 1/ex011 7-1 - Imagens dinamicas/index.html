@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+    <p>Tente abrir esse site em varios dispositivos difirentes ou simplismente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 710px)" srcset="imagens/foto-p.png" type="image/png"> <!-- E POR ULTIMO A MENOR -->
+        <source media="(max-width: 1025px)" srcset="imagens/foto-m.png" type="image/png"> <!-- DEPOIS A MEDIA -->
+        <img src="imagens/foto-g.png" alt="Imagem flexivel"> <!-- PRIMEIRO A BASE -->
+    </picture>
+
+    <h1>Reproduzindo audio</h1> <!-- ARQUIVOS COMPATIVEIS / MP4, OGG, WAV -->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/midia.mp3" type="audio/mpeg">
+        <source src="midia/midia.ogg" type="audio/ogg">
+        <source src="midia/midia.wav" type="audio/wav"> <!-- EVITAR WAV PORQUE EM GERAL É MUITO PESADO -->
+        <p>Infelizmente seu navegador nao consegue reproduzir audio. <a href="midia/midia.mp3">Clique aqui para baixar o arquivo MP3.</a></p> <!-- CASO O NAVEGADOR NAO RODE NENHUM DESSES ARQUIVOS, ENTAO, MOSTRARA ESSA MENSAGEM -->
+    </audio>
+</body>
+</html>
