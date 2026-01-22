@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-header-footer: #11111186;
+    --cor-fundo: #d8d8d8;
+    --cor-hover: #C6A75E;
+    --cor-tex-secun: #333333;
+    --cor-botoes: #1F5E4B;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    margin-top: 85px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    /* z-index: 999; caso queira deixar transparente e se mover junto com o scrol */
+    background-color: var(--cor-header-footer);
+    padding-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+    display: flex;
+}
+
+.logo {
+    width: 170px;
+    margin-right: 335px;
+}
+
+.logo img {
+    height: 100px;
+    width: 120px;
+    margin-left: 50px;
+}
+
+nav {
+    padding-top: 30px;
+}
+
+nav a {
+    margin-right: 80px;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--cor-tex-secun);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: var(--cor-hover);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: var(--cor-tex-secun);
+    text-decoration: none;
+}
+
+.social {
+    margin-left: auto;
+    padding-right: 30px;
+    padding-top: 25px;
+}
+
+.social img {
+    background-color: #8A8A8A;
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+main {
+    margin: 50px;
+}
+
+h2 {
+    padding: 20px 0;
+
+}
+
+.card {
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    background-color: rgb(224, 172, 172);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.1em;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+    
+
+#avaliaçoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+#avaliaçoes > h2 {
+    flex-basis: 100%;
+    margin-bottom: 0;
+}
+
+#avaliaçoes > p {
+    flex-basis: 100%;
+}
+.cards {
+    display: flex;
+    margin: auto;
+}
+
+.card img {
+    margin-left: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.card h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* ===== MEDIA QUERIES PARA 800px ===== */
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 1em;
+        margin-top: 120px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 80px;
+        width: 100px;
+        margin-left: 0;
+    }
+
+    nav {
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin-right: 20px;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .social {
+        margin-left: 0;
+        padding-right: 0;
+        padding-top: 15px;
+        justify-content: center;
+    }
+
+    .social img {
+        width: 25px;
+        margin-left: 15px;
+    }
+
+    main {
+        margin: 30px 20px;
+    }
+
+    .card {
+        width: 160px;
+        padding: 15px;
+        margin-left: 5px;
+    }
+
+    #avaliaçoes {
+        gap: 40px;
+    }
+
+    .card img {
+        width: 85%;
+    }
+
+    .card h3 {
+        font-size: 1em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .stars {
+        font-size: 0.95em;
+    }
+}
+
+/* ===== MEDIA QUERIES PARA 400px ===== */
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.95em;
+        margin-top: 100px;
+    }
+
+    header {
+        padding-bottom: 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .logo img {
+        height: 60px;
+        width: 80px;
+    }
+
+    nav {
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin-right: 0;
+        padding: 8px;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+
+    .social {
+        margin-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+
+    .social img {
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    main {
+        margin: 20px 15px;
+    }
+
+    h2 {
+        padding: 15px 0;
+        font-size: 1.3em;
+    }
+
+    .card {
+        width: 140px;
+        padding: 12px;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    #avaliaçoes {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #avaliaçoes > h2 {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    #avaliaçoes > p {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .card img {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card h3 {
+        font-size: 0.95em;
+        margin-top: 8px;
+    }
+
+    .card p {
+        font-size: 0.85em;
+        margin-top: 3px;
+    }
+
+    .stars {
+        font-size: 0.9em;
+        margin-top: 8px;
+    }
+}

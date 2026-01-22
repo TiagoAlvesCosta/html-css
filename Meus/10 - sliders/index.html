@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="corpo.css">
+    <script src="arquivo.js" defer></script> <!-- defer = ultima coisa a ser carregada no site --> 
+    <title>Slider com intereçoes</title>
+</head>
+<body>
+    <header>
+        <div class="container"> <!-- conteudo principal -->
+
+            <div class="logo"><img src="img/logo.png" alt="logo da empresa HIEND"></div> <!-- logo da empresa -->
+
+            <div class="menu"> <!-- menu -->
+                <nav>
+                    <a href="#home">home</a>
+                    <a href="#sobre">sobre</a>
+                    <a href="#equipe">nossa equipe</a>
+                    <a href="#servicos">serviços</a>
+                    <a href="#contato">contato</a>
+                </nav>
+            </div>
+
+            <div class="social"> <!-- midias sociais -->
+                <a href="https://github.com/TiagoAlvesCosta" target="_blank" ref="external"><img src="social/icone-github.png" alt=""></a>
+                <a href="https://www.instagram.com/otiagueira/" target="_blank" ref="external"><img src="social/icone-instagram.png" alt=""></a>
+                <a href="https://w.app/rk018u" target="_blank" ref="external"><img src="social/160200.png" alt=""></a>
+            </div>
+
+        </div>
+    </header>
+
+    
+        <section class="slider"> <!-- bloco dos slides -->
+            <div class="slider-content"> <!-- botoes seletores dos slides -->
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                <div class="slide-box primeiro"> <!-- para destinguir uma classe da outra, basta colocar um espaço -->
+                    <img class="img-desktop" src="img/slide1.png" alt="slide desktop">
+                    <img class="img-mobile" src="img/slide1-pq.png" alt="slide mobile">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="img/slide2.png" alt="slide desktop">
+                    <img class="img-mobile" src="img/slide2-pq.png" alt="slide mobile">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="img/slide3.png" alt="slide desktop">
+                    <img class="img-mobile" src="img/slide3-pq.png" alt="slide mobile">
+                </div>
+                <div class="nav-auto"> <!-- navegacao automatica -->
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section id="home">
+                <div class="container1">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo nobis corrupti odit quasi quia, aliquid quis ducimus error neque cupiditate unde adipisci sequi officia natus tempore iure itaque consectetur expedita?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed saepe iusto quisquam quis? Magni cupiditate voluptates iusto quisquam, laboriosam quam inventore deserunt! Voluptatibus ex quis provident ducimus, ut illo iure.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum libero fuga magnam laboriosam ipsum, id, aperiam facilis vero non voluptatem, commodi nulla esse optio cum quis eaque qui maiores voluptatum?</p>
+                </div>
+            </section>
+
+            <section id="sobre">
+                <div class="container1">
+                    <h2>Sobre</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis repellat non voluptatibus, iusto aspernatur, odit harum illo sint asperiores aliquam provident aliquid deserunt nisi quidem enim. Aliquam voluptatibus sequi nostrum?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate voluptates non repellendus et similique at numquam explicabo, ullam perspiciatis blanditiis tempore cumque illo nobis architecto fugiat officia. Assumenda, reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi temporibus labore odit, molestias, fugit dignissimos enim iusto quibusdam nostrum beatae obcaecati aliquam. Recusandae autem possimus illum esse praesentium? Temporibus, excepturi.</p>
+                </div>
+            </section>
+
+            <section id="equipe">
+                <div class="container1">
+                    <h2>Nossa equipe</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, numquam architecto labore magni perferendis earum dolores dolore asperiores assumenda est alias quo voluptatibus eveniet cum vero soluta excepturi esse doloremque.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam ipsum neque doloremque accusamus modi explicabo laborum quasi sed dicta, odio veritatis praesentium minus, eligendi recusandae odit repellat ab! Iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque porro nisi itaque repellat accusamus voluptates qui necessitatibus expedita pariatur saepe repellendus, vel veniam autem cupiditate? Quo quaerat quibusdam expedita sunt?</p>
+                </div>
+            </section>
+
+            <h2>Avaliações</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic explicabo porro exercitationem facilis reprehenderit, asperiores rem perferendis doloremque harum quam saepe enim temporibus quia voluptates iure molestiae velit beatae?</p>
+            <section id="avaliaçoes">
+            <div class="card">
+                <img src="social/5580988.png" alt="">
+                <h3>Helena</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero </p>
+                <div class="stars">★★★★☆ 4.5</div>
+            </div>
+
+            <div class="card">
+                <img src="social/5580988.png" alt="">
+                <h3>Diogo</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero </p>
+                <div class="stars">★★★★☆ 4.0</div>
+            </div>
+
+            <div class="card">
+                <img src="social/5580988.png" alt="">
+                <h3>Pedro</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero </p>
+                <div class="stars">★★★★☆ 4.0</div>
+            </div>
+
+            <div class="card">
+                <img src="social/5580988.png" alt="">
+                <h3>Tiago</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero </p>
+                <div class="stars">★★★★☆ 4.5</div>
+            </div>
+
+            <div class="card">
+            <img src="social/5580988.png" alt="">
+                <h3>Daniela</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vero </p>
+                <div class="stars">★★★★☆ 4.5</div>
+            </div>
+            </section>
+
+            <section id="servicos">
+                <div class="container1">
+                    <h2>Serviços</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam ab nesciunt, quidem, ex maxime consequuntur rem placeat velit omnis qui temporibus vero illo eligendi eveniet exercitationem ipsa, cum optio.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quam saepe deleniti optio quos repudiandae neque et cupiditate. Ab quas quod sequi magnam pariatur delectus animi iste ipsa itaque incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus nam quaerat, suscipit, ipsum ducimus animi ullam magnam sit eos facere fugiat dolorem, atque dicta. A tempore quam ex quae.</p>
+                </div>
+            </section>
+            
+            <section id="contato">
+                <div class="container1">
+                    <h2>Contado</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus minima cum, sint quidem libero dolore magni laborum deserunt ipsum eaque placeat at enim cumque qui fuga, minus asperiores, voluptas commodi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, exercitationem officia! Fuga, quasi dolor! Dolor totam dicta velit, itaque similique cum nulla iusto animi quasi obcaecati tenetur ducimus eos. Nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quia ipsum, vel iusto beatae quaerat consectetur, possimus, consequuntur ducimus labore commodi magnam aut velit sequi nisi doloremque corporis. Maiores, soluta!</p>
+                </div>
+            </section>
+        </main>
+
+</body>
+</html>

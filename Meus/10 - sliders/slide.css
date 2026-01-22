@@ -1,0 +1,138 @@
+section.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important; /* para que ele nao crie um padding em outros dispositivos */ 
+    overflow: hidden; /* é uma propriedade que corta e oculta completamente qualquer conteúdo (texto, imagens, etc.) que ultrapasse as dimensões (largura ou altura) definidas para um elemento */
+}
+
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input, .img-mobile{ 
+    display: none;
+}
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box img {
+    width: 100%; /* faz com que a imagem ocupe toda a tela */
+    height: 100%;
+}
+
+.nav-manual, .nav-auto { 
+    position: absolute; /* faz com que as bolinhas de navegaçao fique colada com as imagens */
+    width: 100%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div {
+    border: 1px solid #ff0054;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.8s;
+    margin-bottom: 230px;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: #ff0054;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1 { /* quando estiver selecionado a bolinha, tera cor de fundo */
+    background-color: #ff0054;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2 { 
+    background-color: #ff0054;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3 { 
+    background-color: #ff0054;
+}
+
+#radio1:checked ~ .primeiro { /* referente a primeira imagem */
+    margin-left: 0%;
+} 
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%; /* faz com que apareça a segunda imagem */ 
+} 
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%; /* faz com que apareça a terceira imagem */
+} 
+
+
+@media screen and (max-width:800px){
+    .img-desktop{
+        display: none;
+    }
+    .img-mobile{
+        display: block;
+    }
+    .nav-auto, .nav-manual {
+        bottom: 5%;
+    }
+    
+    section.slider {
+        width: 95%;
+    }
+
+    .slider-content {
+        height: 300px;
+    }
+
+    .nav-manual .manual-btn, .nav-auto div {
+        padding: 8px;
+        margin-bottom: 480px;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .img-desktop{
+        display: none;
+    }
+    .img-mobile{
+        display: block;
+    }
+    
+    section.slider {
+        width: 100%;
+        margin: 0;
+    }
+
+    .slider-content {
+        height: 220px;
+    }
+
+    .nav-auto, .nav-manual {
+        bottom: 5%;
+    }
+
+    .nav-manual .manual-btn, .nav-auto div {
+        padding: 6px;
+        border: 1px solid #ff0054;
+        margin-bottom: 480px;
+    }
+
+    .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+        margin-right: 8px;
+    }
+}
