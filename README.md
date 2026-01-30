@@ -37,7 +37,7 @@
 </head>
 <body>
   <section class="projetos">
-  <h1>Curso de HTML e CSS do cursoemvideo></h1>
+  <h1>Projetos e Contato</h1>
     <p>Estou aprendendo a criar sites e agora vou gerenciar meus repositorios!</p>
       <ul>
         <li><a href="https://tiagoalvescosta.github.io/projeto-android/">Projeto android</a></li>
