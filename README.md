@@ -12,6 +12,6 @@
 <h2>Minhas redes sociais:</h2>
 <ul>
   <li><a href="https://www.linkedin.com/in/tiago-alves-b5675a395/">LinkedIn</a></li>
-  <li><a href="https://www.instagram.com/otiagueira/"></a>Instagram</li>
+  <li><a href="https://www.instagram.com/otiagueira/">Instagram</a></li>
   <li><a href="(41)9-99729-0299">WhatsApp</a></li>
 </ul>
