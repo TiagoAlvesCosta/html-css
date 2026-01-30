@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src: url(assets/fonts/static/Inter-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Inter-Regular;
+    src: url(assets/fonts/static/Inter-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url(assets/fonts/static/Inter-SemiBold.ttf) format("truetype");
+}
+
+:root {
+    --font-normal: 'Inter', sans-serif;
+    --font-bold: 'Inter-Bold', sans-serif;
+    --font-regular: 'Inter-Regular', sans-serif;
+    --font-semi-bold: 'Inter-SemiBold', sans-serif;
+    --fonte-green: hsl(75, 94%, 57%);
+    --fonte-white: hsl(0, 0%, 100%);
+    --fonte-Grey-700: hsl(0, 0%, 63%);
+    --fonte-Grey-800: hsl(0, 0%, 12%);
+    --fonte-Grey-900: hsla(0, 0%, 24%, 0.37);
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+main {
+    padding-top: 5px;
+    background-color: #1e1e1e;
+    width: 375px;
+    height: 660px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 50px auto 50px auto;
+}
+
+main h1 {
+    text-align: center;
+    font-family: var(--font-regular);
+    font-size: 1.8em;
+    color: var(--fonte-white);
+}
+
+main p {
+    text-align: center;
+    font-family: var(--font-regular);
+}
+
+.location {
+    font-family: var(--font-bold);
+    color: var(--fonte-green);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: var(--fonte-Grey-700);
+    margin-bottom: 26px;
+    margin-top: 32px
+}
+
+.redes a {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--font-semi-bold);
+    color: var(--fonte-white);
+    background-color: var(--fonte-Grey-900);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.redes a:hover {
+    background-color: var(--fonte-Grey-800);
+}
