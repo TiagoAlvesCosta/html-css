@@ -11,6 +11,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /* para a rolagem to titulo junto com a aba */
         }
 
         thead, tfoot {
@@ -18,10 +19,29 @@
             color: white;
         }
 
+        thead tr th { /* titulo colocado junto com a planilha */
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        
+        tbody tr:nth-child(even) { /* cor em celulas pares */
+            background-color: aquamarine;
+        }
+
+        tbody tr:nth-child(odd) { /* cor em celular impares */
+            background-color: lightblue;
+        }
+
+        /* tbody tr:hover {
+            background-color: rgba(165, 232, 255, 0.459);
+        } */
+
         td, th {
             padding: 10px;
             border: 1px solid black;
         }
+
 
         td {
             font-weight: normal;
@@ -35,12 +55,19 @@
             text-decoration: underline;
         }
 
-        .estatistica:hover {
-            background-color: rgba(165, 232, 255, 0.459);
-        }
-
         .num {
             text-align: right;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 8px;
+            background-color: lightgray ;
+        }
+
+        .sequencia {
+            text-align: center;
         }
     </style>
     <title>Tabelas</title>
@@ -48,6 +75,7 @@
 <body>
     <!-- Anatomia para tabelas grandes
          Table
+            Caption
             thead
                 tr, td, th
             tbody 
@@ -58,194 +86,196 @@
     <h1>Uso de tabelas grandes</h1>
 </body>
     <table>
+        <caption>Populaçao das Unidades Federativas</caption>
         <thead>
+            <!-- Scope=col = referncia que é o titulo da coluna -->
             <tr>
-                <th>numero</th>
-                <th>Estado</th>
-                <th>Populaçao/2025</th>
-                <th>Populaçao/2024</th>
-                <th>% do total</th>
+                <th scope="col" style="width: 0px;"></th> <!-- ediçao da largura individual -->
+                <th scope="col">Estado</th> 
+                <th scope="col">Populaçao/2025</th>
+                <th scope="col">Populaçao/2024</th>
+                <th scope="col">% do total</th>
                 
             </tr>
         </thead>
         <tbody>
-            <tr class="estatistica">
-                <td class="num">1</td>
+            <tr>
+                <td class="sequencia">1</td>
                 <td><a href="#">Sao paulo</a></td>
                 <td class="num">46 081 801</td>
                 <td class="num">45 973 194</td>
                 <td>21,59%</td>
             </tr>
-            <tr class="estatistica">
-                <td>2</td>
+            <tr>
+                <td class="sequencia">2</td>
                 <td><a href="#">Minas Gerais</a></td>
                 <td class="num">21 393 441</td>
                 <td class="num">21 322 691</td>
                 <td>10,02%</td>
             </tr>
-            <tr class="estatistica">
-                <td>3</td>
+            <tr>
+                <td class="sequencia">3</td>
                 <td><a href="#">Rio de Janeiro</a></td>
                 <td class="num">17 223 547</td>
                 <td class="num">17 219 679</td>
                 <td>8,07%</td>
             </tr>
-            <tr class="estatistica">
-                <td>4</td>
+            <tr>
+                <td class="sequencia">4</td>
                 <td><a href="#">Bahia</a></td>
                 <td class="num">14 870 907</td>
                 <td class="num">14 850 513</td>
                 <td>6,97%</td>
             </tr>
-            <tr class="estatistica">
-                <td>5</td>
+            <tr>
+                <td class="sequencia">5</td>
                 <td><a href="#">Paraná</a></td>
                 <td class="num">11 890 517</td>
                 <td class="num">11 824 665</td>
                 <td>5,57%</td>
             </tr>
-            <tr class="estatistica">
-                <td>6</td>
+            <tr>
+                <td class="sequencia">6</td>
                 <td><a href="#">Rio Grande do Sul</a></td>
                 <td class="num">11 233 26</td>
                 <td class="num">11 824 665</td>
                 <td>5,57%</td>
             </tr>
-            <tr class="estatistica">
-                <td>7</td>
+            <tr>
+                <td class="sequencia">7</td>
                 <td> <a href="#">Pernambuco</a></td>
                 <td class="num">9 562 007</td>
                 <td class="num">9 539 029</td>
                 <td>4,48%</td>
             </tr>
-            <tr class="estatistica">
-                <td>8</td>
+            <tr>
+                <td class="sequencia">8</td>
                 <td> <a href="#">Ceará</a></td>
                 <td class="num">9 268 836</td>
                 <td class="num">9 233 656</td>
                 <td>4,34%</td>
             </tr>
-            <tr class="estatistica">
-                <td>10</td>
+            <tr>
+                <td class="sequencia">10</td>
                 <td><a href="#">Pará</a></td>
                 <td class="num">8 711 196</td>
                 <td class="num">8 664 306</td>
                 <td>4,08%</td>
             </tr>
-            <tr class="estatistica">
-                <td>11</td>
+            <tr>
+                <td class="sequencia">11</td>
                 <td> <a href="#">Santa Catarina</a></td>
                 <td class="num">8 187 029	</td>
                 <td class="num">8 058 441</td>
                 <td>3,84%</td>
             </tr>
-            <tr class="estatistica">
-                <td>12</td>
+            <tr>
+                <td class="sequencia">12</td>
                 <td> <a href="#">Goiás</a></td>
                 <td class="num">7 423 629	</td>
                 <td class="num">7 350 483</td>
                 <td>3,48%</td>
             </tr>
-            <tr class="estatistica">
-                <td>13</td>
+            <tr>
+                <td class="sequencia">13</td>
                 <td><a href="#">Maranhão</a></td>
                 <td class="num">7 018 211</td>
                 <td class="num">7 010 960</td>
                 <td>3,29%</td>
             </tr>
-            <tr class="estatistica">
-                <td>14</td>
+            <tr>
+                <td class="sequencia">14</td>
                 <td> <a href="#">Amazonas</a></td>
                 <td class="num">4 321 616	</td>
                 <td class="num">4 281 209</td>
                 <td>2,02%</td>
             </tr>
-            <tr class="numero">
-                <td>15</td>
+            <tr>
+                <td class="sequencia">15</td>
                 <td><a href="#">Paraíba</a></td>
                 <td class="num">4 164 468</td>
                 <td class="num">4 145 040</td>
                 <td>1,95%</td>
             </tr>
-            <tr class="estatistica">
-                <td>16</td>
+            <tr>
+                <td class="sequencia">16</td>
                 <td> <a href="#">Espírito Santo</a></td>
                 <td class="num">4 126 854</td>
                 <td class="num">4 102 129	</td>
                 <td>1,93%</td>
             </tr>
-            <tr class="estatistica">
-                <td>17</td>
+            <tr>
+                <td class="sequencia">17</td>
                 <td><a href="#">Mato Grosso</a></td>
                 <td class="num">3 893 659</td>
                 <td class="num">3 836 399	</td>
                 <td>1,82%	</td>
             </tr>
-            <tr class="estatistica">
-                <td>18</td>
+            <tr>
+                <td class="sequencia">18</td>
                 <td> <a href="#">Rio Grande do Norte</a></td>
                 <td class="num">3 455 236</td>
                 <td class="num">3 446 071</td>
                 <td>1,62%</td>
             </tr>
-            <tr class="estatistica">
-                <td>19</td>
+            <tr>
+                <td class="sequencia">19</td>
                 <td><a href="#">Piauí</a></td>
                 <td class="num">3 384 547</td>
                 <td class="num">3 375 646</td>
                 <td>1,59%</td>
             </tr>
-            <tr class="estatistica">
-                <td>20</td>
+            <tr>
+                <td class="sequencia">20</td>
                 <td><a href="#">Distrito Federal</a></td>
                 <td class="num">2 996 899</td>
                 <td class="num">2 982 818</td>
                 <td>1,40%</td>
             </tr>
-            <tr class="estatistica">
-                <td>21</td>
+            <tr>
+                <td class="sequencia">21</td>
                 <td> <a href="#">Mato Grosso do Sul</a></td>
                 <td class="num">2 924 631	</td>
                 <td class="num">2 901 895</td>
                 <td>1,37%</td>
             </tr>
-            <tr class="estatistica">
-                <td>22</td>
+            <tr>
+                <td class="sequencia">22</td>
                 <td><a href="#">Sergipe</a></td>
                 <td class="num">2 299 425	</td>
                 <td class="num">2 291 077</td>
                 <td>1,08%</td>
             </tr>
-            <tr class="estatistica">
-                <td>23</td>
+            <tr>
+                <td class="sequencia">23</td>
                 <td><a href="#">Rondônia</a></td>
                 <td class="num">1 751 950</td>
                 <td class="num">1 746 227</td>
                 <td>0,82%</td>
             </tr>
-            <tr class="estatistica">
-                <td>24</td>
+            <tr>
+                <td class="sequencia">24</td>
                 <td><a href="#">Tocantins</a></td>
                 <td class="num">1 586 859</td>
                 <td class="num">1 577 342</td>
                 <td>0,74%</td>
             </tr>
-            <tr class="estatistica">
-                <td>25</td>
+            <tr>
+                <td class="sequencia">25</td>
                 <td><a href="#">Acre</a></td>
                 <td class="num">884 372</td>
                 <td class="num">880 631</td>
                 <td>0,41%</td>
             </tr>
-            <tr class="numero">
-                <td>26</td>
+            <tr>
+                <td class="sequencia">26</td>
                 <td><a href="#">Amapá</a></td>
                 <td class="num">806 517</td>
                 <td class="num">802 837</td>
                 <td>0,38%</td>
             </tr>
-            <tr class="estatistica">
-                <td>27</td>
+            <tr>
+                <td class="sequencia">27</td>
                 <td><a href="#">Roraima</a></td>
                 <td class="num">738 772</td>
                 <td class="num">716 793</td>
@@ -253,13 +283,20 @@
             </tr>
         </tbody>
         <tfoot>
+            <!-- Scope=row = Define que é o titulo da linha -->
             <tr>
                 <td></td>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>213 421 037</strong></td>
                 <td class="num"><strong>203 080 756</strong></td>
                 <td><strong>100%</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut excepturi odit perspiciatis iusto ullam ducimus, pariatur dolore delectus voluptas magni facilis maxime tempore aperiam corrupti magnam quia in fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perspiciatis sed a, aliquid veniam ad suscipit eos mollitia aliquam odit modi velit quod repellendus maxime tenetur hic nesciunt impedit possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis ratione fugit sed tempore magni vero deleniti libero dolorum mollitia odit praesentium sapiente vel dolorem maxime dolore, nihil vitae sit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis neque aliquid quo in debitis, vel quae iusto suscipit, est ducimus nisi voluptatibus eum labore, odit exercitationem? Aspernatur consectetur tempora eveniet!</p>
 </html>
