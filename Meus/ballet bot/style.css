@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color01: #ECD6C4;
+    --color02: #7a5047;
+    --color03: #6D4942;
+    --color04: #553A37;
+    --color05: #3B2A2B;
+
+    --font-padrao: "Montserrat", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to left, var(--color02), var(--color05));
+    font-family: var(--font-padrao);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    gap: 600px;
+}
+
+nav {
+    margin-top: 42px;
+}
+
+header  a {
+    text-decoration: none;
+    margin-left: 60px;
+    color: var(--color01);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header > img {
+    padding: 20px;
+    width: 62px;
+    height: 62px;
+    margin-left: 160px;
+    border-radius: 50%;
+}
+
+hr {
+    color: var(--color01);
+}
+
+.main-content {
+    display: flex;
+    margin-left: 19vw;
+    gap: 600px;
+}
+
+.main-content img {
+    padding-top: 20px;
+    margin-right: 160px;
+    width: 394px;
+    height: 429px;
+}
+
+.main-content h1 {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.main-content p {
+    color: rgba(255, 255, 255, 0.822);
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+.main-content a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.main-content button {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--color01);
+    cursor: pointer;
+}
+
+.main-content button:hover {
+    background-color: #e6b690;
+}
+
+.borda {
+    margin: auto;
+    width: 310px;
+}
+
+.main-text {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color:  rgba(255, 255, 255, 0.822);
+}
+
+.main-text h2 {
+    padding-bottom: 40px;
+    word-spacing: 2px;
+}
+
+.main-text p {
+    padding-bottom: 25px;
+}
+
+footer {
+    padding-top: 35px;
+    margin-left: 42vw;
+}

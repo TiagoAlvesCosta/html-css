@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 1px solid black;
+            width: 400px;
+            height: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 20px 40px 20px;
+        }
+
+        p {
+            padding: 0px 0px 20px 60px;
+        }
+
+        .check {
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Formulario de Cadastro Completo</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label for="iemail">Email: </label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+            <p>
+                <label for="isenha">Senha: </label>
+                <input type="password" name="senha" id="isenha" required minlength="8">
+            </p>
+            <p>
+                <label for="ifut" class="check">Futebol</label><input type="checkbox" name="fut" id="ifut">
+                <label for="idev" class="check">Programaçao</label><input type="checkbox" name="dev" id="idev" checked><br>
+                <label for="ifilme" class="check">Filmes</label><input type="checkbox" name="filme" id="ifilme">
+                <label for="ilazer" class="check">Lazer</label><input type="checkbox" name="lazer" id="ilazer">
+            </p>
+            <p>
+                <label for="ipais">Pais: </label>
+                <select name="pais" id="ipais">
+                    <option selected>---ESCOLHA---</option>
+                    <optgroup label="America do norte">
+                        <option>Estados Unidos</option>
+                        <option>Mexico</option>
+                        <option>Canada</option>
+                    </optgroup>
+                    <optgroup label="America do sul">
+                        <option>Brasil</option>
+                        <option>Ururguai</option>
+                        <option>Argentinha</option>
+                        <option>Chile</option>
+                        <option>Peru</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option>Espanha</option>
+                        <option>Alemanha</option>
+                        <option>Russia</option>
+                        <option>Italia</option>
+                        <option>França</option>
+                        <option>Inglaterra</option>
+                        <option>Holanda</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iperfil">Foto de perfil: </label>
+                <input type="file" name="perfil" id="iperfil">
+            </p>
+            <p>
+                <label for="ibio">Campo para bio: </label><br>
+                <textarea name="bio" id="ibio" cols="30" rows="10"></textarea>
+            </p>
+        </form>
+    </section>
+</body>
+</html>

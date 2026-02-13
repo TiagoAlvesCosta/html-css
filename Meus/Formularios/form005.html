@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 1px solid black;
+            width: 400px;
+            height: 700px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+            background-color: rgba(247, 132, 0, 0.253);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px;
+        }
+
+        p {
+            padding-left: 40px;
+        }
+
+        .tamanho {
+            padding: 20px 0px 20px 40px;
+        }
+
+        .radio {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .sabor {
+            margin-left: 40px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .sabores, legend {
+            margin-left: 40px;
+        }
+
+        fieldset {
+            border: none;
+        }
+        
+        .trad, .diver {
+            padding: 10px;
+        }
+        
+        .borda {
+            margin: 10px 0px 20px 0px;
+        }
+
+        .iborda {
+            margin: 10px 5px 0px 5px;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100px;
+            border-radius: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Formulario de Pedido de Pizza</h1>
+        <form action="cadastro.php" method="post">
+            <p>
+                <label for="inome">Nome do cliente: </label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p class="tamanho">
+                <label for="itamanho">Tamanho da Pizza: </label><br><br>
+                <input type="radio" name="tam" id="ipqn" class="radio"><label for="ipqn">Pequena</label>
+                <input type="radio" name="tam" id="imedia" class="radio"><label for="imedia">Media</label>
+                <input type="radio" name="tam" id="igrande" class="radio"><label for="igrande">Grande</label>
+            </p>
+            <p class="sabores">
+                <fieldset class="trad">
+                <legend>Tradicionais</legend>
+                    <input type="checkbox" name="cala" id="icala" class="sabor"><label for="icala">Calabresa</label><br>
+                    <input type="checkbox" name="muça" id="imuça" class="sabor"><label for="imuça">Muçarela</label><br>
+                    <input type="checkbox" name="port" id="iport" class="sabor"><label for="iport">Portuguesa</label><br>
+                    <input type="checkbox" name="fran" id="ifran" class="sabor"><label for="ifran">Frango com Catupiry</label><br>
+                </fieldset>
+                <fieldset class="diver">
+                <legend>Diversos</legend>
+                    <input type="checkbox" name="marg" id="imarg" class="sabor"><label for="imarg">Marguerita</label><br>
+                    <input type="checkbox" name="quatro" id="iquatro" class="sabor"><label for="iquatro">Quatro Queijos</label><br>
+                    <input type="checkbox" name="napo" id="inapo" class="sabor"><label for="inapo">Napolitano</label><br>
+                    <input type="checkbox" name="casa" id="icasa" class="sabor"><label for="icasa">Da casa</label><br>
+                </fieldset>
+            </p>
+            <p class="borda">
+                <label for="">Borda recheada</label><br>
+                <input type="checkbox" name="sbor" id="isbor" class="iborda"><label for="isbor">Sem borda</label>
+                <input type="checkbox" name="catu" id="icatu" class="iborda"><label for="icatu">Borda com catupiry</label><br>
+                <input type="checkbox" name="doce" id="idoce" class="iborda"><label for="idoce">Borda doce</label>
+            </p>
+            <p>
+                <label for="ipay">Forma de pagamento</label>
+                <select name="pay" id="ipay">
+                    <option selected>--- ESCOLHA ---</option>
+                    <option>Cartao de debito</option>
+                    <option>Cartao de credito</option>
+                    <option>PIX</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Enviar" class="button">
+            </p>
+        </form>
+    </section>
+</body>
+</html>

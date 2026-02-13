@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 1px solid black;
+            width:400px;
+            height: 350px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        h1{
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            padding-left: 40px;
+            padding-bottom: 15px;
+        }
+
+        .button {
+            width: 160px;
+            margin-top: 10px;
+            border-radius: 20px;
+            height: 40px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+
+        .button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Cadastro</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Nome completo: </label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+            <p>
+                <label for="idata">Data de Nascimento: </label>
+                <input type="date" name="data" id="idata" value="2026-02-12" required>
+            </p>
+            <p>
+                <label for="icpf">CPF :</label>
+                <input type="number" name="cpf" id="icpf" required placeholder="XXX-XXX-XXX-XX" autocomplete="off" maxlength="11">
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" required placeholder="(xx)x-xxxx-xxxx" maxlength="11" pattern="^\(\d{2}\)\d{1}-\d{4}-\d{4}$">
+            </p>
+            <p>
+                <label for="isenha">Senha: </label>
+                <input type="password" name="senha" id="isenha">
+            </p>
+            <p>
+                <label for="iconf">Confirme a senha: </label><input type="password" name="conf" id="iconf">
+            </p>
+            <p>
+                <input type="submit" value="Enviar" class="button">
+                <input type="reset" value="Limpar" class="button">
+            </p>
+        </form>
+    </section>
+</body>
+</html>

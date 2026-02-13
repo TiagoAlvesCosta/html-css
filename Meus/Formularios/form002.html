@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 1px solid black;
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 30px 0px 20px 0px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.664);
+        }
+
+        .cadastro {
+            border: 1px solid black;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            padding: 10px 0px 10px 30px;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .cadastro:hover {
+            background-color: lightgray;
+        }
+        
+        p {
+            padding: 0px 0px  15px 50px;
+        }
+
+        .check {
+            padding-right: 125px;
+            text-align: end;
+        }
+
+        .check label {
+            font-size: .8em;
+            font-weight: bolder;
+        }
+
+        .lembrar {
+            padding-right: 10px;
+        }
+
+        .button {
+            padding: 10px;
+            width: 250px;
+            margin-left: 30px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Formulario de Login</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p class="cadastro">
+                <label for="iemail">Email: </label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+            <p class="cadastro">
+                <label for="isenha">Senha: </label>
+                <input type="password" name="senha" id="isenha" required minlength="6">
+            </p>
+            <p  class="check">
+                <label for="ilembrar" class="lembrar">Lembrar de mim</label>
+                <input type="checkbox" name="lembrar" id="ilembrar">
+            </p>
+            <p>
+                <input type="submit" value="Entrar" class="button">
+            </p>
+        </form>
+    </section>
+</body>
+</html>
