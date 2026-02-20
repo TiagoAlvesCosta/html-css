@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* Estilos para impressoras */
+
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu {
+    display: none;
+}
+
+/* rodape de impressao */
+
+article::after {
+    content: 'Esse artigo foi impresso atraves do site www.google.com';
+}
