@@ -32,6 +32,7 @@ menu li {
 
 article {
     display: block;
+    padding-top: 40px;
     width: 600px;
     margin: auto;
 }
